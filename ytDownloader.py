@@ -1,7 +1,7 @@
 from pytube import YouTube
 from sys import argv
-link = argv[1]
-yt = YouTube(link)
+title = input("Enter video Link")
+yt = YouTube(title)
 print("Title: ", yt.title)
 yd = yt.streams.get_highest_resolution()
 yd.download("/home/dnlsgv/Vídeos")
