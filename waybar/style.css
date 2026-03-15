@@ -1,0 +1,134 @@
+/* Configuración base */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: white;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+#workspaces button {
+    padding: 0 0 0 0;
+    margin: 4px 0 6px 0;
+    background-color: transparent;
+    color: #ffffff;
+    min-width: 36px;
+}
+
+#workspaces button.active {
+    padding: 0 0 0 0;
+    margin: 4px 0 6px 0;
+    background-color: #ddddff;
+    color: #000000;
+    min-width: 36px;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: #bbccdd;
+    color: #323232;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+/* Módulos principales */
+#mode, #clock, #battery {
+    padding: 0 10px;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+    border-radius: 4px;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+    border-radius: 4px;
+}
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+/* Estilo modular para cada bloque */
+#cpu {
+    background-color: #fab387;
+    color: #1e1e2e;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+#memory {
+    background-color: #f9e2af;
+    color: #1e1e2e;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+#temperature {
+    background-color: #94e2d5;
+    color: #1e1e2e;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+#pulseaudio {
+    background-color: #cba6f7;
+    color: #1e1e2e;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+#network {
+    background-color: #74c7ec;
+    color: #1e1e2e;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+#language {
+    background-color: #f5c2e7;
+    color: #1e1e2e;
+    padding: 0 10px;
+    border-radius: 4px;
+}
